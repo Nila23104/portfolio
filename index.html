@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nilani Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #fff0f5;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #ffe6f0;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #d63384;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #a61e5c;
+    }
+
+    nav a.active {
+      color: #800040; 
+      font-weight: bolder;
+    }
+
+    h1 {
+      color: #c2185b;
+      font-size: 2.5em;
+      margin-top: 60px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 800px;
+      margin: 20px auto;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    a[target="_blank"] {
+      display: inline-block;
+      margin: 10px 8px;
+      transition: transform 0.3s ease;
+    }
+
+    a[target="_blank"]:hover {
+      transform: scale(1.1);
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    #topBtn:hover {
+      background-color: #b91c69;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    
+    @media (max-width: 1024px) {
+      body {
+        padding: 30px 20px;
+      }
+
+      nav {
+        padding: 10px;
+      }
+
+      nav a {
+        font-size: 1em;
+        margin: 0 10px;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-top: 40px;
+      }
+
+      p {
+        font-size: 1.1em;
+        padding: 0 10px;
+      }
+
+      #topBtn {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+    }
+
+    
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+      }
+
+      nav a {
+        font-size: 0.6em;
+        margin: 4px 0;
+        display: inline-block;
+      }
+
+      h1 {
+        font-size: 1.4em;
+        margin-top: 30px;
+      }
+
+      p {
+        font-size: 1em;
+        padding: 0 5px;
+      }
+
+      #topBtn {
+        font-size: 13px;
+        padding: 8px 10px;
+        right: 20px;
+        bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h1>Hi, I'm Nilani 👋</h1>
+    <p>
+      Welcome to my portfolio website! I’m an aspiring software developer passionate about building responsive web applications. Click the links above to explore my projects, certifications, and more!
+    </p>
+    <p>
+      <a href="https://github.com/Nila23104" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/nilani23" target="_blank">LinkedIn</a>
+    </p>
+  </main>
+
+ 
+  <button id="topBtn" title="Go to top">↑ Top</button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 100 ? "block" : "none";
+    };
+
+    topBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+</body>
+</html>

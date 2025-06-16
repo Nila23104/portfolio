@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Nilani</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+    body {
+      background-color: #fff0f5;
+      font-family: 'Poppins', sans-serif;
+      margin: 40px;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+   nav {
+      background-color: #ffe6f0;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+nav a {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #a61e5c;
+}
+
+nav a.active {
+      color: #800040; 
+      font-weight: bolder;
+    }
+
+
+    
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 30px;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      background-color: #d63384;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .resume-btn:hover {
+      background-color: #b0266a;
+      transform: translateY(-2px);
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #f1a8c2;
+      margin: 60px auto;
+      width: 80%;
+      animation: fadeUp 2s ease;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+      z-index: 999;
+    }
+
+    #topBtn:hover {
+      background-color: #a61e5c;
+    }
+
+    
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+@media (max-width: 1024px) {
+  body {
+    margin: 30px 20px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 1em;
+    margin: 0 10px;
+  }
+
+  .resume-btn {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+  }
+
+  hr {
+    margin: 50px auto;
+    width: 90%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  body {
+    margin: 20px 10px;
+  }
+
+  nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+  nav a {
+    font-size: 0.6em;
+    margin: 4px 0;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 1.4em;
+    margin: 30px 0 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .resume-btn {
+    font-size: 0.95em;
+    padding: 10px 16px;
+  }
+
+  hr {
+    margin: 40px auto;
+    width: 95%;
+  }
+
+  #topBtn {
+    font-size: 13px;
+    padding: 8px 10px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+    
+  </style>
+</head>
+
+<body>
+   <nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="certifications.html">Certifications</a>
+  <a href="resume.html" class="active">Resume</a>
+  <a href="contact.html" >Contact</a>
+</nav>
+
+
+
+  <h1>📄 My Resume</h1>
+
+  <p>You can view my resume by clicking the button below:</p>
+
+  <p>
+    <a href="certificates/resume.pdf" target="_blank" class="resume-btn">
+      View Resume
+    </a>
+  </p>
+
+  <hr>
+
+  
+  <button id="topBtn" title="Go to top">↑ Top</button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 100 ? "block" : "none";
+    };
+    topBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+</body>
+</html>

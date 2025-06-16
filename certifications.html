@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications - Nilani</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+    body {
+      background-color: #fff0f5;
+      font-family: 'Poppins', sans-serif;
+      margin: 40px;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+   nav {
+      background-color: #ffe6f0;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+nav a {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #a61e5c;
+}
+
+nav a.active {
+      color: #800040; 
+      font-weight: bolder;
+    }
+
+
+    
+
+    .certificates-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      padding: 20px 40px;
+    }
+
+    .certificate-block {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(214, 51, 132, 0.15);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeZoom 0.8s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 500px;
+    }
+
+    .certificate-block:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(214, 51, 132, 0.25);
+    }
+
+    .certificate-block h3 {
+      color: #d63384;
+      margin-bottom: 15px;
+      font-size: 1.3em;
+    }
+
+    .certificate-block img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      height: 250px;
+      object-fit: contain;
+    }
+
+    .certificate-block a {
+      margin-top: auto;
+      background-color: #d63384;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .certificate-block a:hover {
+      background-color: #a61e5c;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+
+    #topBtn:hover {
+      background-color: #a61e5c;
+    }
+
+    @keyframes fadeZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.96);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+   
+@media (max-width: 1024px) {
+  body {
+    margin: 30px 20px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 1em;
+    margin: 0 10px;
+  }
+
+  .certificates-container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .certificate-block {
+    min-height: 450px;
+  }
+
+  .certificate-block h3 {
+    font-size: 1.15em;
+  }
+
+  .certificate-block a {
+    font-size: 0.95em;
+    padding: 8px 16px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  body {
+    margin: 20px 10px;
+  }
+
+  nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+
+  nav a {
+    font-size: 0.6em;
+    margin: 4px 0;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 1.4em;
+    margin: 30px 0 20px;
+    text-align: center;
+  }
+
+  .certificates-container {
+    padding: 10px;
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-block {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .certificate-block h3 {
+    font-size: 1em;
+  }
+
+  .certificate-block img {
+    height: 200px;
+  }
+
+  .certificate-block a {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+
+  #topBtn {
+    font-size: 13px;
+    padding: 8px 10px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+
+   
+  </style>
+</head>
+
+<body>
+   <nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="certifications.html" class="active">Certifications</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html" >Contact</a>
+</nav>
+
+
+
+  <h1>🏅 My Certifications</h1>
+
+  <div class="certificates-container">
+    
+    <div class="certificate-block">
+      <h3>Java Internship – CodSoft</h3>
+      <img src="certificates/Codsoft.png" alt="CodSoft Certificate" />
+      <a href="certificates/Codsoft.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>SQL Basics – HackerRank</h3>
+      <img src="certificates/Hackerrank.png" alt="SQL Certificate" />
+      <a href="certificates/Hackerrank.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>Basics of Python – Infosys Springboard</h3>
+      <img src="certificates/Infosys.png" alt="Python Certificate" />
+      <a href="certificates/Infosys.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>Java Programming – Great Learning</h3>
+      <img src="certificates/Great.png" alt="Java Certificate" />
+      <a href="certificates/Great.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>MS Excel – Microsoft</h3>
+      <img src="certificates/Microsoft.png" alt="Excel Certificate" />
+      <a href="certificates/Microsoft.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>Java Bootcamp – LetsUpgrade</h3>
+      <img src="certificates/Lets.png" alt="Bootcamp Certificate" />
+      <a href="certificates/Lets.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>Tableau – SkillUp</h3>
+      <img src="certificates/Skillup.png" alt="Tableau Certificate" />
+      <a href="certificates/Skillup.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>Java – Sololearn</h3>
+      <img src="certificates/solo.png" alt="Sololearn Java Certificate" />
+      <a href="certificates/solo.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>Paper Presentation – Cloud Brain</h3>
+      <img src="certificates/Paper.png" alt="Paper Presentation" />
+      <a href="certificates/Paper.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>Workshop – NIT Data Science</h3>
+      <img src="certificates/Nit.png" alt="Workshop Certificate" />
+      <a href="certificates/Nit.png" target="_blank">View Full Size</a>
+    </div>
+
+    <div class="certificate-block">
+      <h3>Workshop – Global AI BootCamp</h3>
+      <img src="certificates/Global.png" alt="AI Bootcamp Certificate" />
+      <a href="certificates/Global.png" target="_blank">View Full Size</a>
+    </div>
+  </div>
+
+  <button id="topBtn" title="Go to top">↑ Top</button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 100 ? "block" : "none";
+    };
+    topBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Nilani</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #fff0f5;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #ffe6f0;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #d63384;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a.active {
+      color: #800040;
+      font-weight: bolder;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #a61e5c;
+    }
+
+    h1 {
+      color: #c2185b;
+      font-size: 2.5em;
+      margin-top: 60px;
+      text-align: center;
+      animation: slideInLeft 0.8s ease-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: justify;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: slideInRight 1.2s ease-out;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    #topBtn:hover {
+      background-color: #b91c69;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+   
+    @media (max-width: 1024px) {
+      body {
+        padding: 30px 20px;
+      }
+
+      nav {
+        padding: 10px;
+      }
+
+      nav a {
+        font-size: 1em;
+        margin: 0 10px;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-top: 40px;
+      }
+
+      p {
+        font-size: 1.1em;
+        padding: 20px;
+      }
+
+      #topBtn {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+    }
+
+    
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 0.6em;
+        margin: 4px 0;
+        display: inline-block;
+      }
+
+      h1 {
+        font-size: 1.4em;
+        margin-top: 30px;
+      }
+
+      p {
+        font-size: 1em;
+        padding: 15px;
+      }
+
+      #topBtn {
+        font-size: 13px;
+        padding: 8px 10px;
+        right: 20px;
+        bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h1>About Me 🙋‍♀️</h1>
+    <p>
+      🖊️I am Nilani K, an aspiring software developer with a strong passion for building impactful and user-friendly web applications. I completed my B.Tech in Information Technology at EGS Pillay Engineering College with a CGPA of 8.7. I completed my SSLC in Ramesh Matriculation Hr. Sec. School with 89% and HSC in Srinivasa Matriculation Hr. Sec. School with 93%. I enjoy front-end development, clean UI and solving real-world problems using HTML, CSS, JavaScript, Java and I also know about Salesforce technologies like LWC, Apex, Trigger, Flow.
+      <br><br>
+      📚I’ve completed certifications like SQL from HackerRank, Python from Infosys Springboard and Java Bootcamp from Let’s Upgrade. I’ve also participated in paper presentations and workshops, growing both skills and confidence.
+      <br><br>
+      🪄I’ve built projects like a cloud alert system “Cloud Brain” and an HR Management App using Salesforce. My dream is to work with inspiring teams, build amazing products and grow as a Software Developer.
+    </p>
+  </main>
+
+  
+  <button id="topBtn" title="Go to top">↑ Top</button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 100 ? "block" : "none";
+    };
+
+    topBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+</body>
+</html>
